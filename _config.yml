@@ -9,11 +9,11 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : kimziv's github blog 
 tagline: Site Tagline
 author :
   name : kimziv
-  email : kimziv@qq.co
+  email : kimziv@qq.com
   github : kimziv
   twitter : kimziv
   feedburner : feedname
@@ -117,7 +117,8 @@ JB :
   #
   sharing :
     provider : false
-    
+    add a test post
+
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
