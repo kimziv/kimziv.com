@@ -4,6 +4,7 @@
   max-width: 700px; }
 
 .container-narrow > hr {
+  padding-top: 60px;
   margin: 30px 0; }
 
 .navbar .nav {
