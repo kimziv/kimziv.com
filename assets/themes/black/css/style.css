@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/bg.gif);
+    background-image: url(../img/bg.png);
 
     /* scrollbar style */
 }
@@ -17,6 +17,11 @@ body {
     clear: none;
 }
 
+/*.navbar-inner{
+    background: #ddd;
+    background-color:#fafafa;
+}*/
+
 .thepost a {
     padding-right: 13px;
     background: url(../img/link.gif) no-repeat right -2px;
@@ -33,7 +38,15 @@ body {
 .page-header h1 {
     color: #000;
 }
+.page-header small {
+   color: #efefef;
+}
 
+/*.container{
+    background: #000;
+  
+}
+*/
 .page-container {
     background-image: url(../img/white_bg.png);
     margin-top: 60px;
