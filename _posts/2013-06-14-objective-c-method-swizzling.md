@@ -65,7 +65,7 @@ tags: [method swizzling, objective c, 方法混合]
 
 所以会输出以上结果，而且不会出现死循环了。
 
-**** [Demo下载链接](http://filemarkets.com/file/kimziv/d5a3f330/)
+#### [Demo下载链接](http://filemarkets.com/file/kimziv/d5a3f330/)
 
 <p id="ref1"></p>
 <br/>
