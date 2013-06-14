@@ -59,7 +59,7 @@ tags: [method swizzling, objective c, 方法混合]
 	NSLog("method2 called");
 	[self method2];//注意，这里是递归调用method2
 
-而［sd method2]则执行的是method1中代码：
+而`[sd method2]`则执行的是method1中代码：
 
 	NSLog("method1 called");
 
