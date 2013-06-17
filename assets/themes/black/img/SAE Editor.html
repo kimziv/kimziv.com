@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SAE Editor</title>
+        <link href="SAE%20Editor_files/sae_editor.css" rel="stylesheet" type="text/css">
+        <link href="SAE%20Editor_files/codemirror.css" rel="stylesheet" type="text/css">
+        <link href="SAE%20Editor_files/night.css" rel="stylesheet" type="text/css">
+        <link href="SAE%20Editor_files/cobalt.css" rel="stylesheet" type="text/css">
+        <link href="SAE%20Editor_files/jquery-ui.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="SAE%20Editor_files/jquery.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/sae_editor.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/jquery-ui.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/codemirror.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/css.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/javascript.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/xml.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/clike.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/htmlmixed.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/php.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/yaml.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/python.js"></script>
+        <script type="text/javascript" src="SAE%20Editor_files/ajaxfileupload.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#select_applist").val('pythonplayground');
+    $("#select_versionlist").val('1');
+    sae_glvar.appname = 'pythonplayground';
+    getDir('1/','/');
+});
+</script>
+    </head>
+    <body>
+        <div class="topbar"> 
+            <span class="logo"><a href="#"><img src="SAE%20Editor_files/logo.gif" alt="logo" height="31" width="31"></a> </span> 
+            <span class="title">SAE CLOUD EDITOR</span> 
+            <span id="title_appname">APP:<span>pythonplayground</span></span> 
+            <span id="title_version">VERSION:<span>1</span></span> 
+            <span id="opmsg" style="margin-left:30px;font-size:12px;">保存成功！</span> 
+            <span style="float:right;margin-left:10px;">
+               <a href="javascript:void(0);" onclick="logout()" style="color:#FFF;font-size:14px;">注销</a> 
+            </span> 
+            <span class="saveall">
+                <input class="saveall_btn" value="全部保存" name="saveall" onclick="saveAll()" type="button">
+            </span> 
+            <div class="clr"></div>
+        </div>
+        <div class="ebody" style="">
+            <div class="eleft">
+                <div class="tabbar_bg bodr_r">
+<span style="margin-left:5px;">应用</span>
+<select id="select_applist">
+                                <option value="adhoc">adhoc</option>                
+                                <option value="kaixinyixiao">kaixinyixiao</option>                
+                                <option value="kimziv">kimziv</option>                
+                                <option value="lefenfen">lefenfen</option>                
+                                <option value="mobiledev">mobiledev</option>                
+                                <option selected="selected" value="pythonplayground">pythonplayground</option>                
+                                <option value="tt1111">tt1111</option>                
+                                <option value="xiaosile">xiaosile</option>                
+                </select>
+<select id="select_versionlist">
+                                <option selected="selected" value="1">1</option>                
+                </select>
+<a id="newapplink" href="" target="_blank"></a>
+                </div>
+                <div id="naviarea" class="bodr_r" onselectstart="return false;">
+                    <div class="applistbar bodr_b"> 
+<div style="width:150px;float:left;overflow:hidden;">
+<span style="margin-left:5px;">
+路径
+</span>
+                        <span class="applist">
+                            <select name="pathlist" id="pathlist">
+                            <option value="1/">/</option><option value="1/public">public</option><option selected="selected" value="1/public/stylesheets">stylesheets</option></select>
+                        </span>
+</div>
+                        <div style="width:60px;float:left;">
+                        <span class="icon" id="createfile_icon" style="margin-left:5px;"><img src="SAE%20Editor_files/file_add_icon.gif" alt="create file" title="新建文件" height="17" width="16"></span> 
+                        <span class="icon" id="createfolder_icon" style="margin-left:5px;"><img src="SAE%20Editor_files/folder_add_icon.gif" alt="create folder" title="新建文件夹" height="16" width="18"></span> 
+                        <span class="icon" id="uploadfile_icon" style="margin-left:5px;"><img src="SAE%20Editor_files/file_upload_icon.gif" alt="create file" title="上传文件" height="13" width="11"></span> 
+</div>
+                        <div class="clr"></div>
+                    </div>
+                    <div style="height: 545px;" id="filelist">
+                        <div style="top: 0px; display: block;" id="selected_bg" class="selected_bg"></div>
+                        <div id="treecontainer">
+                            <ul class="tree" id="filetree"><li class="file" title="main.css"><div class="name selected" path="1/public/stylesheets/main.css" editable="true" url="http://1.pythonplayground.sinaapp.com/public/stylesheets/main.css">main.css</div></li><li class="file" title="main.styl"><div class="name" path="1/public/stylesheets/main.styl" editable="false" url="http://1.pythonplayground.sinaapp.com/public/stylesheets/main.styl">main.styl</div></li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 1007px;" class="eright">
+                <div onselectstart="return false;" class="tabbar_bg">
+                    <div id="show_hide_filelist" class="tabbar_bg bodr_r">《</div>
+                    <div id="prefile" class="tabbar_bg bodr_r">&lt;</div>
+                    <div style="width: 968px;" id="tabbarcontainer" class="tabbarout">
+                        <div id="tabbar" class="tabbar tabbar_bg"><div class="tab bodr_r cur_tab" id="tab_0" path="1/config.yaml" tabi="0"> <span class="title">1/config.yaml</span> <span class="icon"><a href="#"><img src="SAE%20Editor_files/z.gif" class="close_icon" height="10" width="10"></a></span><div class="clr"></div></div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                    <div id="nextfile" class="tabbar_bg bodr_l">&gt;</div>
+                    <div class="clr"></div>
+                </div>
+                <div style="height: 571px;" id="codearea" class="codearea"><div class="codecontainer" id="codecontainer_0" tabi="0" style="display: block; height: 571px;"><div style="height: 571px;" class="CodeMirror cm-s-cobalt CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 76px; left: 472.2px;"><textarea tabindex="0" autocapitalize="off" autocorrect="off" wrap="off" style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: medium none;">handle:
+- expire: if(path ~ "(.*)\.(js|css|jpg|png|gif|ico)") time 31536000
+- compress: if(out_header["Content-Length"] &gt;= 1240) compress
+- compress: if(out_header["Content-Type"] ~ "text") compress 
+- compress: if(path ~ "/css/") compress
+- compress: if(path ~ "/js/") compress</textarea></div><div style="left: 29px;" class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div draggable="true" tabindex="-1" class="CodeMirror-scroll"><div style="position: relative; min-height: 100%;"><div style="min-width: 519.4px; margin-left: 29px; min-height: 224px;" class="CodeMirror-sizer"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: medium none;"><div class="CodeMirror-measure"><pre style="text-align: left;"><span>x</span></pre></div><div style="position: relative; z-index: 1; display: none;"><div style="position: absolute; left: 4px; top: 96px; width: 273.6px; height: 12px;" class="CodeMirror-selected"></div><div style="position: absolute; left: 4px; top: 36px; width: 974px; height: 60px;" class="CodeMirror-selected"></div></div><div style=""><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">1</div></div><pre><span class="cm-def">---</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">2</div></div><pre><span class="cm-atom">name</span><span class="cm-meta">: </span>chinapython</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">3</div></div><pre><span class="cm-atom">version</span><span class="cm-meta">: </span><span class="cm-number">1</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">4</div></div><pre>&nbsp;</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">5</div></div><pre><span class="cm-atom">handle</span><span class="cm-meta">:</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">6</div></div><pre><span class="cm-meta">- </span><span class="cm-atom">expire</span><span class="cm-meta">: </span>if(path ~ "(.*)\.(js|css|jpg|png|gif|ico)") time 31536000</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">7</div></div><pre><span class="cm-meta">- </span><span class="cm-atom">compress</span><span class="cm-meta">: </span>if(out_header<span class="cm-meta">[</span>"Content-Length"<span class="cm-meta">]</span> &gt;= 1240) compress</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">8</div></div><pre>&nbsp;</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">9</div></div><pre><span class="cm-atom">libraries</span><span class="cm-meta">:</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">10</div></div><pre><span class="cm-meta">- </span><span class="cm-atom">name</span><span class="cm-meta">: </span>lxml</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">11</div></div><pre><span class="cm-atom">  version</span><span class="cm-meta">: </span>"2.3.4"</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">12</div></div><pre>&nbsp;</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">13</div></div><pre><span class="cm-atom">cron</span><span class="cm-meta">:</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">14</div></div><pre><span class="cm-meta">- </span><span class="cm-atom">description</span><span class="cm-meta">: </span>cron_test</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">15</div></div><pre><span class="cm-atom">  url</span><span class="cm-meta">: </span>/load</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">16</div></div><pre><span class="cm-atom">  schedule</span><span class="cm-meta">: </span>"*/24 * * * *"</pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">17</div></div><pre><span class="cm-def">...</span></pre></div><div style="position: relative;"><div style="position: absolute; left: -29px;"><div style="left: 0px; width: 20px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">18</div></div><pre>&nbsp;</pre></div></div><div style="left: 443.2px; top: 72px; height: 12px; visibility: hidden;" class="CodeMirror-cursor">&nbsp;</div><div style="display: none; visibility: hidden;" class="CodeMirror-cursor CodeMirror-secondarycursor">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; top: 224px;">&nbsp;</div><div style="left: 0px;" class="CodeMirror-gutters"><div style="width: 28px;" class="CodeMirror-gutter CodeMirror-linenumbers"></div></div></div></div></div></div> </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div style="display: none; top: 105px; left: 41px;" class="exmenu" id="exmenu"><div class="entry" onclick="getFile('1/public/stylesheets/main.css')">编辑</div><div class="entry" onclick="visitFile('http://1.pythonplayground.sinaapp.com/public/stylesheets/main.css')">通过URL访问</div><div class="split"> <div class="line"></div></div><div class="entry" onclick="delFile('1/public/stylesheets/main.css')">删除</div></div>
+        
+    
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div><div aria-labelledby="ui-dialog-title-dlg1" role="dialog" tabindex="-1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" style="display: none; z-index: 1000; outline: 0px none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-dialog-title-dlg1" class="ui-dialog-title">&nbsp;</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content" id="dlg1">
+        </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div style="z-index: 1001;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"></div><div style="z-index: 1002;" class="ui-resizable-handle ui-resizable-sw"></div><div style="z-index: 1003;" class="ui-resizable-handle ui-resizable-ne"></div><div style="z-index: 1004;" class="ui-resizable-handle ui-resizable-nw"></div></div></body></html>
