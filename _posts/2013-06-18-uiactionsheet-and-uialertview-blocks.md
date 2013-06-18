@@ -10,7 +10,7 @@ tags : [UIActionSheet,UIAlertView, Blocks, Delegate ]
 
 
 
-Objective  C里Block介绍
+### Objective  C里Block介绍
 
 Block和一个函数很像， 产生于一个叫做GCD的新功能，GCD用于同步处理环境下有更好的运行效率，Block把一个task封装好交给GCD,GCD在宏观上对其进行CPU和Memory等资源进行分配，Block一般长成这样：
 
