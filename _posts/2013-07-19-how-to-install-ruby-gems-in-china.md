@@ -38,9 +38,11 @@ tags: ["gem", "翻墙", "ruby"]
 ### RVM改用本站作为下载源, 提高 Ruby 安装速度
 
  *	For Mac
+
 	$ sed -i .bak 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 
  *	For Linux
+ 
 	$ sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 
 附：[淘宝 Ruby官方FTP镜像](http://ruby.taobao.org/mirrors/ruby)
