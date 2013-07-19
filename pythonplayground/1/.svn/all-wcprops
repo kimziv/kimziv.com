@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/pythonplayground/!svn/ver/287/1
+END
+common.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/pythonplayground/!svn/ver/185/1/common.py
+END
+index.wsgi
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/pythonplayground/!svn/ver/192/1/index.wsgi
+END
+view.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/pythonplayground/!svn/ver/184/1/view.py
+END
+setting.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/pythonplayground/!svn/ver/284/1/setting.py
+END
+config.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/pythonplayground/!svn/ver/210/1/config.yaml
+END
+crawler.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/pythonplayground/!svn/ver/287/1/crawler.py
+END
+model.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/pythonplayground/!svn/ver/262/1/model.py
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/pythonplayground/!svn/ver/1/1/readme.txt
+END
+weibo.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/pythonplayground/!svn/ver/113/1/weibo.py
+END
