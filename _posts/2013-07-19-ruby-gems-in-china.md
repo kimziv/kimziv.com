@@ -28,14 +28,14 @@ tags: ["gem", "翻墙", "ruby"]
 	gem 'rails', '3.2.12'
 	...
 
-### Ruby 源代码下载
+### Ruby源代码下载
 
  *	[ruby-2.0.0-p247.tar.gz](http://ruby.taobao.org/mirrors/ruby/2.0/ruby-2.0.0-p247.tar.gz)
  *	[ruby-1.9.3-p448.tar.gz](http://ruby.taobao.org/mirrors/ruby/1.9/ruby-1.9.3-p448.tar.gz)
  *	[ruby-1.9.2-p320.tar.gz](http://ruby.taobao.org/mirrors/ruby/1.9/ruby-1.9.2-p320.tar.gz)
  *	[ruby-1.8.7-p358.tar.gz](http://ruby.taobao.org/mirrors/ruby/1.8/ruby-1.8.7-p358.tar.gz)
 
- ### RVM 改用本站作为下载源, 提高 Ruby 安装速度
+### RVM改用本站作为下载源, 提高 Ruby 安装速度
 
  *	For Mac
 	$ sed -i .bak 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
