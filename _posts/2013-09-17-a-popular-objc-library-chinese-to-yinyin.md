@@ -34,7 +34,9 @@ tags : [pinyin,chinese,hanzi,objc,convert]
     	
 ### 接图
 
-![ScreenShot](https://github.com/kimziv/PinYin4Objc/blob/master/ScreenShot.PNG)
+![ScreenShot](/atachments/2013-09-17-screenshot.png)
 
-### [项目地址](https://github.com/kimziv/PinYin4Objc)
+### 项目地址
+
+[https://github.com/kimziv/PinYin4Objc](https://github.com/kimziv/PinYin4Objc)
    
