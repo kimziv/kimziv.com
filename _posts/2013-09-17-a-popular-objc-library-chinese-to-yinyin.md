@@ -34,7 +34,7 @@ tags : [pinyin,chinese,hanzi,objc,convert]
     	
 ### 接图
 
-![ScreenShot](/atachments/2013-09-17-screenshot.png)
+![ScreenShot](/attachments/2013-09-17-screenshot.png)
 
 ### 项目地址
 
