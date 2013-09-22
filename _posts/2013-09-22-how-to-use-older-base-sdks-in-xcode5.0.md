@@ -21,3 +21,5 @@ tags : [xcode5,base sdk,older,ios7]
 对于还没有安装Xcode5.0的童鞋，在安装之前最好备份一下`iPhoneOS6.1.sdk`目录，在安装Xcode5.0之后拷贝到相关目录`/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs`即可以使用sdk6.1了，在项目中设置，如下图：
 
 ![ScreenShot](/attachments/2013-09-22-base-sdk.png)
+
+附iPhoneOS6.1.sdk下载链接：[iPhoneOS6.1.sdk](http://pan.baidu.com/share/link?shareid=3844278108&uk=3675764550)
