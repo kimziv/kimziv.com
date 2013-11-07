@@ -2,7 +2,7 @@
 layout: post
 category : blog
 title : 怎么在Xcode获取Core Data的调试日志？
-tagline:  怎么在Xcode获取Core Data的调试日志?
+tagline:  怎么在Xcode获取Core Data的调试日志
 tags : [Core Data, Debug , log, 日志]
 ---
 {% include JB/setup %}
