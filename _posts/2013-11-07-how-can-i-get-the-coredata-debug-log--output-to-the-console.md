@@ -18,5 +18,9 @@ tags : [Core Data, Debug , log, 日志]
 如下图:
 
 ![ScreenShot](/attachments/2013-11-07-1.png)
+
+
 ![ScreenShot](/attachments/2013-11-07-2.png)
+
+
 ![ScreenShot](/attachments/2013-11-07-3.png)
